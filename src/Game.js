@@ -9,7 +9,7 @@ class Game extends React.Component {
     this.setState({ roll: 0, dice: [...new Array(5)], keep: [] });
   }
 
-  rolldice = () => {
+  rollDice = () => {
     let { keep } = this.state; 
     let dice = this.state.dice.map( (el, i) => {
       if (keep.includes(i))
@@ -64,7 +64,7 @@ class Game extends React.Component {
                 roll={roll} 
                 dice={dice} 
                 keep={keep} 
-                rolldice={this.rolldice} 
+                rollDice={this.rollDice} 
                 toggleKept={this.toggleKept}
               />
             }
